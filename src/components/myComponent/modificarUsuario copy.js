@@ -39,79 +39,68 @@ const ModificarUsuario= ()=>{
     return (
         <div>
           {
-            userModificado ? <p> Usuario Modificado con Exito</p>
-            <Form onSubmit={
-           (e)=>{
-             modificarUsuario(e)
-           }
-         }>
-     <Table striped bordered hover>
-       <thead>
-         <tr>
-           <th>#</th>
-           <th>Email</th>
-           <th> Nombre</th>
-           <th>Password</th>
-           <th>Acciones</th>
-         </tr>
-       </thead>
-       <tbody>
-       <tr>
-               <td></td>
-               <td>
-               <InputGroup className="mb-3">
-               <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
-               <Form.Control
-               id="emailnewinput"
-               type='Email'
-               placeholder="Email"
-               aria-label="Email"
-               aria-describedby="basic-addon1"
-               defaultValue={newUsuario.email}
-               disabled
-               
-         />
-       </InputGroup>
-       </td>
-       <td>
-               <InputGroup className="mb-3">
-               <InputGroup.Text id="basic-addon2">Nombre</InputGroup.Text>
-               <Form.Control
-                id="nombrenewinput"
-               placeholder="Nombre"
-               aria-label="Nombre"
-               aria-describedby="basic-addon2"
-               defaultValue={newUsuario.nombre}
-               onChange={
-                 (e)=>{modificarNombre(e.target.value)}
-               }
-         />
-       </InputGroup>
-       </td>
-       <td>
-       <InputGroup className="mb-3">
-               <InputGroup.Text id="basic-addon3">Password</InputGroup.Text>
-               <Form.Control
-                id="passwordnewinput"
-               type='Password'
-               placeholder="Password"
-               aria-label="Password"
-               aria-describedby="basic-addon3"
-               defaultValue={newUsuario.password}
-               onChange={
-                 (e)=>{modificarPassword(e.target.value)}
-               }
-         />
-       </InputGroup>
-       </td>
-       <td>  <Button variant="primary" type='submit'>Modificar
-       </Button></td>
-          </tr>
-       </tbody>
-       </Table>
-      </Form>
-    }
-    </div>
-    )
+             userModificado ? <><p> Usuario Modificado con Exito</p><Form onSubmit={(e) => {
+              modificarUsuario(e);
+            } }>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Email</th>
+                    <th> Nombre</th>
+                    <th>Password</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
+                        <Form.Control
+                          id="emailnewinput"
+                          type='Email'
+                          placeholder="Email"
+                          aria-label="Email"
+                          aria-describedby="basic-addon1"
+                          defaultValue={newUsuario.email}
+                          disabled />
+                      </InputGroup>
+                    </td>
+                    <td>
+                      <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon2">Nombre</InputGroup.Text>
+                        <Form.Control
+                          id="nombrenewinput"
+                          placeholder="Nombre"
+                          aria-label="Nombre"
+                          aria-describedby="basic-addon2"
+                          defaultValue={newUsuario.nombre}
+                          onChange={(e) => { modificarNombre(e.target.value); } } />
+                      </InputGroup>
+                    </td>
+                    <td>
+                      <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon3">Password</InputGroup.Text>
+                        <Form.Control
+                          id="passwordnewinput"
+                          type='Password'
+                          placeholder="Password"
+                          aria-label="Password"
+                          aria-describedby="basic-addon3"
+                          defaultValue={newUsuario.password}
+                          onChange={(e) => { modificarPassword(e.target.value); } } />
+                      </InputGroup>
+                    </td>
+                    <td>  <Button variant="primary" type='submit'>Modificar
+                    </Button></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Form></>
+          };
+        </div>
+           )
 }
 export default ModificarUsuario
