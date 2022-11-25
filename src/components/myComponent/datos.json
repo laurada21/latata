@@ -1,17 +1,20 @@
 [
-    {"email":"prueba@gmail.com",
-    "password":"1234",
-    "nombre":"prueba1"
+    {"nombre":"corazon juguete",
+    "descripcion":"corazon de juguete 15x50 cm",
+    "precio":"$35.0",
+    "stock":"15"
+
+    },
+    {"nombre":"Sol",
+    "descripcion":"Sol de espuma juguete 15x50 cm",
+    "precio":"$35.0",
+    "stock":"3"
 
     },
     {
-        "email":"pruebe@gmail.com",
-    "password":"1234",
-    "nombre":"prueba2"
-    },
-    {
-        "email":"pruebo@gmail.com",
-    "password":"1234",
-    "nombre":"prueba3"
+        "nombre":"Oso corazon",
+    "descripcion":"Oso corazon juguete 20x50 cm",
+    "precio":"$87.0",
+    "stock":"6"
     }
 ]
